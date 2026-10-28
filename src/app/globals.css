@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  color-scheme: light;
+  --nm-brand: #1a1714;
+  --nm-accent: #8a6232;
+  --nm-accent-hover: #6e4c24;
+  --nm-surface: #f6f3ee;
+  --nm-card: #ffffff;
+  --nm-ink: #1a1714;
+  --nm-muted: #6b645c;
+  --nm-line: #e4ddd2;
+  --nm-subtle: #f3eee6;
+}
+
+.dark {
+  color-scheme: dark;
+  --nm-brand: #100e0c;
+  --nm-accent: #d4a574;
+  --nm-accent-hover: #e2bc92;
+  --nm-surface: #141210;
+  --nm-card: #1d1a17;
+  --nm-ink: #f6f3ee;
+  --nm-muted: #b3a89c;
+  --nm-line: #332c26;
+  --nm-subtle: #241f1b;
+}
+
+@theme inline {
+  --color-nm-brand: var(--nm-brand);
+  --color-nm-accent: var(--nm-accent);
+  --color-nm-accent-hover: var(--nm-accent-hover);
+  --color-nm-surface: var(--nm-surface);
+  --color-nm-card: var(--nm-card);
+  --color-nm-ink: var(--nm-ink);
+  --color-nm-muted: var(--nm-muted);
+  --color-nm-line: var(--nm-line);
+  --color-nm-subtle: var(--nm-subtle);
+  --font-sans: var(--font-nomos-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-nomos-display), ui-serif, Georgia, serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--nm-surface);
+    color: var(--nm-ink);
+    font-family: var(--font-nomos-sans), ui-sans-serif, system-ui, sans-serif;
+  }
+
+  button,
+  a,
+  summary {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: var(--nm-accent);
+    color: #fff;
+  }
+}
+
+.font-display {
+  font-family: var(--font-nomos-display), ui-serif, Georgia, serif;
+}

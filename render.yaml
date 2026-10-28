@@ -1,0 +1,18 @@
+# Render Blueprint — Nomos Landing
+# NEXT_PUBLIC_APP_URL entra no bundle: defina antes do build.
+
+services:
+  - type: web
+    name: nomos-landing
+    runtime: node
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: NODE_ENV
+        value: production
+      - key: NEXT_PUBLIC_APP_URL
+        sync: false
+      - key: NEXT_PUBLIC_CONTACT_EMAIL
+        sync: false
