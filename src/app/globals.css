@@ -4,34 +4,37 @@
 
 :root {
   color-scheme: light;
-  --nm-brand: #1a1714;
-  --nm-accent: #8a6232;
-  --nm-accent-hover: #6e4c24;
-  --nm-surface: #f6f3ee;
+  --nm-brand: #171717;
+  --nm-accent: #171717;
+  --nm-accent-hover: #2e2e2e;
+  --nm-on-accent: #ffffff;
+  --nm-surface: #f7f7f7;
   --nm-card: #ffffff;
-  --nm-ink: #1a1714;
-  --nm-muted: #6b645c;
-  --nm-line: #e4ddd2;
-  --nm-subtle: #f3eee6;
+  --nm-ink: #171717;
+  --nm-muted: #737373;
+  --nm-line: #e6e6e6;
+  --nm-subtle: #f2f2f2;
 }
 
 .dark {
   color-scheme: dark;
-  --nm-brand: #100e0c;
-  --nm-accent: #d4a574;
-  --nm-accent-hover: #e2bc92;
-  --nm-surface: #141210;
-  --nm-card: #1d1a17;
-  --nm-ink: #f6f3ee;
-  --nm-muted: #b3a89c;
-  --nm-line: #332c26;
-  --nm-subtle: #241f1b;
+  --nm-brand: #0d0d0d;
+  --nm-accent: #f4f4f5;
+  --nm-accent-hover: #ffffff;
+  --nm-on-accent: #171717;
+  --nm-surface: #111111;
+  --nm-card: #1a1a1a;
+  --nm-ink: #f5f5f5;
+  --nm-muted: #a3a3a3;
+  --nm-line: #2e2e2e;
+  --nm-subtle: #222222;
 }
 
 @theme inline {
   --color-nm-brand: var(--nm-brand);
   --color-nm-accent: var(--nm-accent);
   --color-nm-accent-hover: var(--nm-accent-hover);
+  --color-nm-on-accent: var(--nm-on-accent);
   --color-nm-surface: var(--nm-surface);
   --color-nm-card: var(--nm-card);
   --color-nm-ink: var(--nm-ink);
@@ -61,7 +64,7 @@
 
   ::selection {
     background: var(--nm-accent);
-    color: #fff;
+    color: var(--nm-on-accent);
   }
 }
 

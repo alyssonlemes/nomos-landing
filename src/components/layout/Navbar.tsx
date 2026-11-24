@@ -42,7 +42,7 @@ export function Navbar() {
 
         <div className="hidden items-center gap-2 sm:flex">
           <ThemeToggle />
-          <a href={APP_URL} className="inline-flex min-h-11 items-center rounded-xl bg-nm-accent px-5 text-[13px] font-semibold text-white hover:bg-nm-accent-hover">
+          <a href={APP_URL} className="inline-flex min-h-11 items-center rounded-xl bg-white px-5 text-[13px] font-semibold text-nm-brand hover:bg-white/85">
             Entrar
           </a>
         </div>
@@ -64,7 +64,7 @@ export function Navbar() {
               {link.label}
             </a>
           ))}
-          <a href={APP_URL} className="mt-2 inline-flex min-h-11 items-center rounded-xl bg-nm-accent px-5 text-sm font-semibold text-white">
+          <a href={APP_URL} className="mt-2 inline-flex min-h-11 items-center rounded-xl bg-white px-5 text-sm font-semibold text-nm-brand">
             Entrar
           </a>
         </div>
